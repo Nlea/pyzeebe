@@ -162,6 +162,15 @@ def grpc_stub_cls(grpc_channel):
 
     return GatewayStub
 
+#Adding grpc_addr
+@pytest.fixture
+def grpc_addr():
+    return "localhost:8080"
+
+#Adding grpc_server
+@pytest.fixture
+def grpc_server():
+    return "localhost:8080"
 
 @pytest.fixture
 def aio_create_grpc_channel(request, grpc_addr, grpc_server):
@@ -178,3 +187,4 @@ async def aio_grpc_channel(aio_create_grpc_channel):
 @pytest.fixture
 def task_state() -> TaskState:
     return TaskState()
+

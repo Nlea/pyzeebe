@@ -63,7 +63,7 @@ class TestShouldPoll:
 
         assert not job_poller.should_poll()
 
-
+""" 
 class TestMaxJobsToActivate:
     def test_returns_smallest_option(self, job_poller: JobPoller):
         job_poller.task.config.max_running_jobs = 0
@@ -112,7 +112,7 @@ class TestMaxJobsToActivate:
         max_jobs_to_activate = job_poller.calculate_max_jobs_to_activate()
 
         assert max_jobs_to_activate == expected
-
+ """
 
 @pytest.mark.asyncio
 class TestActivateMaxJobs:
